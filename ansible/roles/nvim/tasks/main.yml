@@ -92,20 +92,9 @@
 - name: Clone Astronvim
   ansible.builtin.git:
     clone: true
-    repo: https://github.com/AstroNvim/AstroNvim
+    repo: https://github.com/rolling-falling/astronvim_config
     version: main
     dest: "{{ ansible_user_dir }}/.config/nvim"
-    depth: 1
-    force: true
-    single_branch: true
-    update: true
-
-- name: Clone Astronvim User
-  ansible.builtin.git:
-    clone: true
-    repo: https://github.com/AstroNvim/user_example
-    version: main
-    dest: "{{ ansible_user_dir }}/.config/nvim/lua/user"
     depth: 1
     force: true
     single_branch: true
