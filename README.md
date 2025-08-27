@@ -34,4 +34,15 @@ Inspired by https://github.com/ALT-F4-LLC/dotfiles
     ```
     pipx install ansible --include-deps
     ```
+- ssh server on localhost
+  ```
+  systemctl enable sshd
+  systemctl restart sshd
+  systemctl status sshd
+  ```
+  authorize with your ssh key on localhost
+  ```
+  cat ~/.ssh/id_ed25519.pub >> ~/.ssh/authorized_keys
+  chmod og-wx ~/.ssh/authorized_keys
+  ```
 - git config
