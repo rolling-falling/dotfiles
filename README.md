@@ -46,3 +46,15 @@ Inspired by https://github.com/ALT-F4-LLC/dotfiles
   chmod og-wx ~/.ssh/authorized_keys
   ```
 - git config
+  ```
+  git config user.name "rolling-falling"
+  git config user.email "..."
+  ```
+  git should use only the ssh key you've added to github
+  ```
+  git config core.sshCommand 'ssh -i ~/.ssh/id_ed25519_rolling_falling -o IdentitiesOnly=yes'
+  ```
+  check the config
+  ```
+  git config --list
+  ```
