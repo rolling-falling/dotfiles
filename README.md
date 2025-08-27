@@ -34,6 +34,18 @@ Inspired by https://github.com/ALT-F4-LLC/dotfiles
     ```
     pipx install ansible --include-deps
     ```
+    Lets get completions for ansible too.
+
+    Ansible uses python's argcomplete.
+
+    Argcomplete generates bash completion for all python scripts that use argparse.
+
+    Enable global argcomplete's completion for current user
+
+    `activate-global-python-argcomplete --dest=${BASH_COMPLETION_USER_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/bash-completion}/completions`
+
+    The trick here is to fed it with correct bash-completion directory.
+
 - ssh server on localhost
   ```
   systemctl enable sshd
@@ -58,3 +70,5 @@ Inspired by https://github.com/ALT-F4-LLC/dotfiles
   ```
   git config --list
   ```
+
+- `cd ansible` # and continue there
